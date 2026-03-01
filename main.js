@@ -15,6 +15,25 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
+// 제휴 문의 폼
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+    });
+    if (res.ok) {
+        contactForm.reset();
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+    }
+});
+
 generateBtn.addEventListener('click', () => {
     lottoNumbersDiv.innerHTML = '';
     const numbers = new Set();

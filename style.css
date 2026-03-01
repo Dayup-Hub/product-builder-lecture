@@ -39,10 +39,13 @@ body {
     background-color: var(--bg-page);
     color: var(--text-primary);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    gap: 1.5rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -139,6 +142,86 @@ h1 {
 .generate-btn:hover {
     background-color: var(--btn-hover);
     box-shadow: 0 6px 16px var(--btn-hover-shadow);
+}
+
+/* 제휴 문의 폼 */
+:root {
+    --input-bg: #f8fafc;
+    --input-border: #cbd5e1;
+    --input-focus: #1a73e8;
+    --label-color: #555;
+}
+
+body.dark {
+    --input-bg: #0f172a;
+    --input-border: #334155;
+    --input-focus: #60a5fa;
+    --label-color: #94a3b8;
+}
+
+.form-container {
+    text-align: left;
+}
+
+.form-title {
+    color: var(--text-heading);
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--label-color);
+    transition: color 0.3s;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1.5px solid var(--input-border);
+    border-radius: 8px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--input-focus);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.form-success {
+    text-align: center;
+    color: #16a34a;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+body.dark .form-success {
+    color: #4ade80;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 480px) {
