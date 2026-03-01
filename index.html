@@ -42,6 +42,23 @@
         <p id="form-success" class="form-success hidden">문의가 성공적으로 전송됐습니다! 빠르게 답변드릴게요.</p>
     </div>
 
+    <div class="container disqus-container">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://product-builder-lecture-ebh.pages.dev/';
+                this.page.identifier = 'lotto-main';
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://productbuilder-viqfpaiple.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>

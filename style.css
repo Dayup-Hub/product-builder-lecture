@@ -163,6 +163,10 @@ body.dark {
     text-align: left;
 }
 
+.disqus-container {
+    margin-top: 2rem;
+}
+
 .form-title {
     color: var(--text-heading);
     font-size: 1.4rem;
